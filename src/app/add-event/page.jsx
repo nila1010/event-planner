@@ -10,26 +10,26 @@ export default async function AddEventPage() {
   }
 
   return (
-    <form action={submit}>
-      <div className="formcontrole">
+    <form action={submit} className="mt-10 min-w-[300px] grid">
+      <div className="formcontrole mb-2">
         <label htmlFor="form_name">
-          Your name:
-          <input id="form_name" type="text" name="name" />
+          <h2 className="text-xl">Your name:</h2>
+          <input className="bg-[#FCFCFC] min-w-[100%] h-8 p-2 rounded-sm" id="form_name" type="text" name="name" required />
         </label>
       </div>
-      <div className="formcontrole">
+      <div className="formcontrole mb-2">
         <label htmlFor="form_date">
-          Date:
-          <input id="form_date" type="date" name="date" />
+          <h2>Date:</h2>
+          <input className="bg-[#FCFCFC] h-8 min-w-[60%] rounded-sm" id="form_date" type="date" name="date" required />
         </label>
       </div>
-      <div className="formcontrole">
+      <div className="formcontrole mb-2">
         <label htmlFor="form_description">
-          Description:
-          <input id="form_description" type="text" name="description" />
+          <h2>Description:</h2>
+          <textarea className="bg-[#FCFCFC] min-w-[100%] h-20 p-2 rounded-sm" id="form_description" type="text" name="description" required />
         </label>
       </div>
-      <button>Add event</button>
+      <button className="text-2xl p-2 outline self-center hover:bg-[#DABD4C]">Add event</button>
     </form>
   );
 }

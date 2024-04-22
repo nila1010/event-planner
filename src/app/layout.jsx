@@ -1,8 +1,8 @@
-import { Inter } from "next/font/google";
+import { Oswald } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 
-const inter = Inter({ subsets: ["latin"] });
+const oswald = Oswald({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Your NEXT event",
@@ -12,10 +12,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <nav className="flex gap-8">
-          <Link href="/">Home</Link>
-          <Link href="/add-event">Add event</Link>
+      <body className={`${oswald.className} bg-[#D8D7D4] grid place-items-center p-10 `}>
+        <nav className="flex gap-8 text-6xl p-5">
+          <Link className="hover:text-[#DABD4C]" href="/">
+            Home
+          </Link>
+          <Link className="hover:text-[#DABD4C]" href="/add-event">
+            Add event
+          </Link>
         </nav>
         {children}
       </body>
