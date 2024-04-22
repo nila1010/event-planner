@@ -13,8 +13,9 @@ export default async function AddEventPage() {
     <form action={submit} className="mt-10 min-w-[300px] grid">
       <div className="formcontrole mb-2">
         <label htmlFor="form_name">
-          <h2 className="text-xl">Your name:</h2>
-          <input className="bg-[#FCFCFC] min-w-[100%] h-8 p-2 rounded-sm" id="form_name" type="text" name="name" required />
+          <h2 className="text-xl ">Your name:</h2>
+          <input className="bg-[#FCFCFC] min-w-[100%] h-8 p-2 rounded-sm peer" id="form_name" type="text" name="name" required />
+          <p className="text-rose-500 invisible peer-invalid:visible">You need to put in a name</p>
         </label>
       </div>
       <div className="formcontrole mb-2">

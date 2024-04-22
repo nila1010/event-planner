@@ -34,6 +34,7 @@ export async function GetEventPage(parms) {
 
   const response = await fetch("https://lwvdzfdgkmziuewtursm.supabase.co/rest/v1/events?id=eq." + slug, {
     headers: headersList,
+    cache: "no-store",
   });
 
   const data = await response.json();
@@ -41,6 +42,7 @@ export async function GetEventPage(parms) {
 
   const commentsResponse = await fetch("https://lwvdzfdgkmziuewtursm.supabase.co/rest/v1/events_comments?event_id=eq." + slug, {
     headers: headersList,
+    cache: "no-store",
   });
 
   const comment = await commentsResponse.json();
